@@ -2,12 +2,21 @@
   <div class="columns">
     <div class="column">
       <div class="list" data-list-limit="true" data-list-max-height="340" data-list-hidden-count="true" data-list-max-columns="1">
-        <div class="grid grid--cols-10">
-        {% for ligne in trains %}
-        <div class="meta">
-           <span class="label">{{ligne.hhmm}}</span> <span class="label label--filled">{{ligne.line}}</span> <span class="label">{{ligne.dest}}</span>
-        </div>
+        <div class="grid grid--cols-{{trains.size}}">
+        {% assign trainsorted = trains | sort: "hhmm" %}
+          {%for ligne in trainsorted %}
+        <div class="label">{{ligne.hhmm}}</div>
         {% endfor %}
+          {% for ligne in trains %}
+        <div class="label label--filled">{{ligne.line}}</div>
+        {% endfor %}
+
+          {% for ligne in trains %}
+        <div class="label">>{{ligne.dest}}</div>
+        {% endfor %}
+        
+           <span class="label"</span> <span class="label label--filled">{{ligne.line}}</span> <span class="label">{{ligne.dest}}</span>
+        </div>
 </div>
 
 <div class="title_bar">
