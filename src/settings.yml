@@ -8,7 +8,7 @@ framework_version: latest
 serverless_language: python
 refresh_interval_floor: ''
 polling_url: 'https://prim.iledefrance-mobilites.fr/marketplace/stop-monitoring?MonitoringRef=STIF:StopArea:SP:{{ stop_area_id | strip }}:'
-polling_headers: ''
+polling_headers: apikey={{ api_key | strip }}
 polling_body: ''
 id: 526516
 oauth_enabled: 'false'
