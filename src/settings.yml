@@ -68,6 +68,6 @@ custom_fields:
   min: 1
   max: 12
   optional: true
-name: My Plugin
+name: Julien
 description: ''
-refresh_interval: 1440
+refresh_interval: 15
