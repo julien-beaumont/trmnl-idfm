@@ -1,7 +1,28 @@
-<div class="layout layout--col layout--center">
-  <span class="title title--large">Quadrant</span>
-</div>
+<div class="layout">
+  <div class="columns">
+    <div class="column">
+      <div class="list" data-list-limit="true" data-list-max-height="340" data-list-hidden-count="true" data-list-max-columns="1">
+        <div class="grid grid--wrap">
+          {% for ligne in trains %}
+            <table>
+              <tr>
+                <td class="label label--outline text--xlarge">{{ligne.hhmm}}</td>
+                <td></td>
+                <td class="label label--filled text--xlarge">{{ligne.line}}</td>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3"> <span  class="label">{{ligne.dest}}</span></td>
+              </tr>
+            </table>
+          {% endfor %}
+        </div>
+      </div>
 
-<div class="title_bar">
-  <span class="title">My Plugin</span>
-</div>
+      <div class="title_bar">
+        <img class="image" src="https://trmnl.com/images/plugins/trmnl--render.svg">
+        <span class="title">{{ station }}</span>
+        <span class="instance">Prochains passages</span>
+      </div>
+    </div>
+  </div>
