@@ -3,24 +3,23 @@
     <div class="column">
       <div class="list" data-list-limit="true" data-list-max-height="340" data-list-hidden-count="true" data-list-max-columns="1">
         <div class="grid grid--cols-{{trains.size}}">
-        {% assign trainsorted = trains | sort: "hhmm" %}
+          {% assign trainsorted = trains | sort: "hhmm" %}
           {%for ligne in trainsorted %}
-        <div class="label text--center">{{ligne.hhmm}}</div>
-        {% endfor %}
+          <div class="label text--center  text--xlarge">{{ligne.hhmm}}</div>
+          {% endfor %}
           {% for ligne in trains %}
-        <div class="label label--filled text--center">{{ligne.line}}</div>
-        {% endfor %}
-
+          <div class="label label--filled text--xlarge">{{ligne.line}}</div>
+          {% endfor %}
           {% for ligne in trains %}
-        <div class="label text--small ">{{ligne.dest}}</div>
-        {% endfor %}
-        
-           <span class="label"</span> <span class="label label--filled">{{ligne.line}}</span> <span class="label">{{ligne.dest}}</span>
+          <div class="label text--small ">{{ligne.dest}}</div>
+          {% endfor %}
         </div>
-</div>
+      </div>
 
-<div class="title_bar">
-  <img class="image" src="https://trmnl.com/images/plugins/trmnl--render.svg">
-  <span class="title">{{ station }}</span>
-  <span class="instance">Prochains passages</span>
-</div>
+      <div class="title_bar">
+        <img class="image" src="https://trmnl.com/images/plugins/trmnl--render.svg">
+        <span class="title">{{ station }}</span>
+        <span class="instance">Prochains passages</span>
+      </div>
+    </div>
+  </div>
