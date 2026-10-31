@@ -2,12 +2,10 @@
   <div class="columns">
     <div class="column">
       <div class="list" data-list-limit="true" data-list-max-height="340" data-list-hidden-count="true" data-list-max-columns="1">
+        <div class="grid grid--cols-10">
         {% for ligne in trains %}
         <div class="meta">
-          <span class="index">{{ligne.hhmm}}</span>
-           <div class="content">
-            <span class="title title--small">{{ligne.line}} {{ligne.dest}}</span>
-          </div>
+           <span class="label">{{ligne.hhmm}}</span> <span class="label label--filled">{{ligne.line}}</span> <span class="label">{{ligne.dest}}</span>
         </div>
         {% endfor %}
 </div>
