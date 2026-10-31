@@ -5,14 +5,14 @@
         <div class="grid grid--cols-{{trains.size}}">
         {% assign trainsorted = trains | sort: "hhmm" %}
           {%for ligne in trainsorted %}
-        <div class="label">{{ligne.hhmm}}</div>
+        <div class="label text--center">{{ligne.hhmm}}</div>
         {% endfor %}
           {% for ligne in trains %}
-        <div class="label label--filled">{{ligne.line}}</div>
+        <div class="label label--filled text--center">{{ligne.line}}</div>
         {% endfor %}
 
           {% for ligne in trains %}
-        <div class="label">>{{ligne.dest}}</div>
+        <div class="label text--small ">{{ligne.dest}}</div>
         {% endfor %}
         
            <span class="label"</span> <span class="label label--filled">{{ligne.line}}</span> <span class="label">{{ligne.dest}}</span>
@@ -21,6 +21,6 @@
 
 <div class="title_bar">
   <img class="image" src="https://trmnl.com/images/plugins/trmnl--render.svg">
-  <span class="title">{{ trmnl.plugin_settings.instance_name }}</span>
-  <span class="instance">Description</span>
+  <span class="title">{{ station }}</span>
+  <span class="instance">Prochain passage</span>
 </div>
